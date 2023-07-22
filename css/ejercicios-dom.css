@@ -12,6 +12,7 @@ body{
 }
 header{
     position: sticky;
+    z-index: 500;
     top: 0;
     width: 100%;
     background-color: rgb(255, 222, 32);
@@ -61,7 +62,7 @@ header h1{
     text-align: center;
 }
 .menu a{
-    padding: 2rem;
+    padding: 1rem;
     width: inherit;
     display: block;
     font-size: 1.5rem;
@@ -92,7 +93,7 @@ header h1{
 .stage{
     display: flex;
     min-height: 50vh;
-    background-color: rgb(56, 56, 56);
+    background-color: rgb(41, 41, 41);
 }
 .ball{
     margin: auto;
@@ -129,4 +130,29 @@ header h1{
     visibility: hidden;
     opacity: 0;
 }
-
+/*--------Modo-oscuro-------*/
+.tema-oscuro-btn{
+    position: fixed;
+    z-index: 999;
+    bottom: 1vh;
+    left: 1vw;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    font-size: 2rem;
+    font-weight: bold;
+    background-color: rgb(255, 222, 32);
+    color: black;
+    transition: all .3s ease-out;
+}
+.tema-oscuro-btn:hover{
+    color: rgb(255, 222, 32);
+    background-color: black;
+}
+.modo-oscuro{
+    background-color: rgb(56, 56, 56);
+    color: rgb(255, 222, 32);
+}
