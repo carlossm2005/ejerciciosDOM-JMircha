@@ -9,7 +9,6 @@ export default function modoOscuro(btn, atributo) {
 
     let luna = "🌙",
     sol = "☀";
-    console.log($selectores, $boton)
 
     function darkmode(){
         $selectores.forEach((el) => el.classList.add("modo-oscuro"));

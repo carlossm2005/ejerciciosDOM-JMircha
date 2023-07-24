@@ -1,4 +1,7 @@
 import countdown from "./dom/cuenta_regresiva.js";
+import networkstatus from "./dom/deteccion_red.js";
+import infoUrl from "./dom/fetch_git.js";
+import searchFilters from "./dom/filtro_busquedas.js";
 import hamburgerMenu from "./dom/menu_hamburger.js";
 import modoOscuro from "./dom/modo_oscuro.js";
 import responsiveMedia from "./dom/obj_responsive.js";
@@ -25,13 +28,15 @@ d.addEventListener("DOMContentLoaded", (e) => {
       "gmaps",
       "(min-width: 1024px)",
       `<a href="https://goo.gl/maps/T8btMqNkedpBzLiu9">Ver mapa</a>`,
-      `<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15930.170878873525!2d-60.67391790361198!3d-32.9270844228931!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95b654abc3ab1d5f%3A0x2f90ce97db2c5a6!2sAlto%20Rosario%20Shopping!5e0!3m2!1ses-419!2sar!4v1689619022317!5m2!1ses-419!2sar" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>`);
-   responsiveTester("resp-test")
+     `<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15930.170878873525!2d-60.67391790361198!3d-32.9270844228931!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95b654abc3ab1d5f%3A0x2f90ce97db2c5a6!2sAlto%20Rosario%20Shopping!5e0!3m2!1ses-419!2sar!4v1689619022317!5m2!1ses-419!2sar" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>`);
+   responsiveTester("resp-test");
+   infoUrl("Gitname");
+   searchFilters(".card-filter",".card");
 });
-
 modoOscuro(".tema-oscuro-btn","modo-oscuro");
-
+networkstatus()
 
 d.addEventListener("keydown", (e) =>{
    moveBall(e, ".ball", ".stage");
 })
+
