@@ -25,8 +25,8 @@
             <a href="#section5">Responsive tester</a>
             <a href="#section6">Datos de usuario GIT</a>
             <a href="#section7">Filtro de busquedas</a>
-            <a href="#section8">section8</a>
-            <a href="#section9">section9</a>
+            <a href="#section8">Lista LocalStorage</a>
+            <a href="#section9">Calculadora</a>
             <a href="#section10">section10</a>
         </nav>
     </aside>
@@ -111,11 +111,48 @@
                 <input name="crear" type="submit" value="Crear">
             </form>
             <ul id="lista-todo">
-                <div class="vacio">No hay tareas pendientes</div>
             </ul>
         </section>
         <section id="section9" class="section">
-            <h2>section 9</h2>
+            <h2>Calculadora</h2>
+            <div class="container">
+                <div class="calculadora">
+                    <form>
+                        <div class="display">
+                            <input type="text" name="display">
+                        </div>
+                        <div>
+                            <input type="button" value="AC" onclick="display.value = ''">
+                            <input type="button" value="DE" onclick="display.value = display.value.toString().slice(0,-1)">
+                            <input type="button" value="." onclick="display.value += '+'">
+                            <input type="button" value="/" onclick="display.value += '/'">
+                        </div>
+                        <div>
+                            <input type="button" value="7" onclick="display.value += '7'">
+                            <input type="button" value="8" onclick="display.value += '8'">
+                            <input type="button" value="9" onclick="display.value += '9'">
+                            <input type="button" value="*" onclick="display.value += '*'">
+                        </div>
+                        <div>
+                            <input type="button" value="4" onclick="display.value += '4'">
+                            <input type="button" value="5" onclick="display.value += '5'">
+                            <input type="button" value="6" onclick="display.value += '6'">
+                            <input type="button" value="-" onclick="display.value += '-'">
+                        </div>
+                        <div>
+                            <input type="button" value="1" onclick="display.value += '1'">
+                            <input type="button" value="2" onclick="display.value += '2'">
+                            <input type="button" value="3" onclick="display.value += '3'">
+                            <input type="button" value="+" onclick="display.value += '+'">
+                        </div>
+                        <div>
+                            <input type="button" value="0" onclick="display.value += '0'">
+                            <input type="button" value="00" onclick="display.value += '00'">
+                            <input type="button" value="=" class="equal" onclick="display.value = eval(display.value)">
+                        </div>
+                    </form>
+                </div>
+            </div>
         </section>
         <section id="section10" class="section">
             <h2>section 10</h2>
